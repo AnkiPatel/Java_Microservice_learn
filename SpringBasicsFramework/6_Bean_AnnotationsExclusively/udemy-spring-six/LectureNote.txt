@@ -1,0 +1,6 @@
+-> Here New class "AppConfiguration" handles everything which we do in spring-beans.xml
+
+
+
+JustFYI :  "Component" annotation notify the sprint framework on startup of application that
+consider the class as component and create the instances and store them in IOC containers.

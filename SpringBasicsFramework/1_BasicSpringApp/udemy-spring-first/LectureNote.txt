@@ -1,0 +1,2 @@
+IoC framwork slogan =  hollywood principle
+"you don't call us, we will call you"

@@ -1,0 +1,2 @@
+-> Instead of injecting dependency in sprint-beans.xml file, inject it via annotation
+-> You have to add context annotation in sprint-bean.xml as mentioned in https://docs.spring.io/spring-framework/reference/core/beans/annotation-config.html

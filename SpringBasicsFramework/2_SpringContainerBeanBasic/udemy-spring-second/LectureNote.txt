@@ -1,0 +1,27 @@
+This project includes learning about
+1) Spring container
+2) Bean scopes
+
+ /*
+         * Spring relies heavily on IoC inversion of control
+         *
+         *		~ the spring container helps to make this inversion of control
+         *
+         *		Create the objects + wire them together + manage their complete life cycle
+         *          from creation to destruction + uses DI to manage components --> these are the spring beans !!!
+         *
+         *		instructions 	+ metadata --> 		the container creates the full application !!!
+         *					  (XML, annotations)
+         *
+         *		Two containers:
+         *		    1.) Spring BeanFactory container
+         *		    2.) Spring ApplicationContext container INTERFACE --> basically it includes all the features
+         *                  of BeanFactory so this is the standard way
+         *
+         *      For example: resolve textual information from a properties file + load beans + wire beans together
+         *		    org.springframework.context.ApplicationContext
+         */
+
+  Another reference :
+  https://docs.spring.io/spring-framework/reference/core/beans/definition.html
+  https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html
