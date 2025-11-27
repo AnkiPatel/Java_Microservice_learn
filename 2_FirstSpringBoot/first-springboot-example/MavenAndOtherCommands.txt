@@ -1,0 +1,15 @@
+mvn clean
+-> Removes the target folder
+-
+
+mvn package
+-> Build the application. Run unit test, Generate the jar file. (target folder will get created)
+
+mvn clean package (chaining the operations)
+
+mvn sprint-boot:run
+-> mvn will refer pom.xml, compile the application, build and run the application
+
+==================
+on terminal you can run jar as
+java -jar <jar-name with full path>

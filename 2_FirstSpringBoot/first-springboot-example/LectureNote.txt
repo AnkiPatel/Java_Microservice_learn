@@ -1,0 +1,77 @@
+Spring Boot annotations summary
+=======================================================
+@SpringBootApplication
+----------------------
+This annotation is used on the Main application class. The purpose is that it enables Spring Boot auto-configuration, component scanning, and configuration setup.
+
+Shortcut for:
+    @Configuration
+    @EnableAutoConfiguration
+    @ComponentScan
+
+
+
+@Configuration
+-----------------
+Marks a Java class as a source of bean definitions for the Spring container. Equivalent to defining beans in applicationContext.xml, but in code.
+
+
+
+@EnableAutoConfiguration
+------------------------
+Tells Spring Boot to automatically configure your app based on the dependencies on the classpath. It looks at libraries like Spring MVC, JPA, or Thymeleaf and sets them up with sensible defaults.
+
+
+
+@ComponentScan
+---------------
+Instructs Spring to scan for components (@Component, @Service, @Repository, @Controller) in the specified package and register them as beans. This is critical for dependency injection to work properly in your app.
+Without specifying basePackages, it scans the package of the class where it's declared and all sub-packages.
+
+
+
+@Component
+
+It is used on any custom class (service, helper, etc.). It marks the class as a Spring-managed bean, allowing it to be auto-detected during component scanning.
+
+
+
+@Autowired
+
+It is used on constructors, fields, or setters. The purpose is that it injects a Spring bean automatically by type.
+
+
+
+@Qualifier
+
+Used with: @Autowired
+
+The purpose is that it resolves ambiguity when multiple beans of the same type exist. Specifies which bean to inject.
+
+
+
+@RestController
+
+It is used on web controller classes - it is a Spring Web annotation that marks a class as a RESTful web service controller. It combines @Controller and @ResponseBody — returns data (usually JSON) directly instead of rendering a view.
+
+It tells Spring that this class handles HTTP requests and returns data (usually JSON or XML).
+
+
+
+@RequestMapping
+
+It is a Spring MVC annotation used to map web requests (URLs) to controller methods or classes. Tells Spring what URL path (and optionally, HTTP method) a controller or method should handle.
+
+Can be applied at both the class and method levels.
+
+Class-level usage: sets a base URL path for all methods
+
+Method-level usage: maps specific requests to handler methods
+
+
+
+@GetMapping
+
+It is a Spring MVC annotation used to map HTTP GET requests to specific controller methods in REST APIs. It is a shortcut for: @RequestMapping(method = RequestMethod.GET)
+
+Typical use case: retrieving resources (e.g., a list of users, details of a product, etc.)
