@@ -1,0 +1,4 @@
+-> Java is notorious for requiring a lot of repetitive code (getters, setters, constructors, etc.)
+-> Lombok significantly reduces boilerplate code, making Java development faster, cleaner and more maintainable
+By removing repetitive code, developers can focus on business logic
+-> It makes it easy to implement the builder patterns often used for constructing complex objects

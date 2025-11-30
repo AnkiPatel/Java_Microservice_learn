@@ -1,0 +1,27 @@
+@GetMapping
+It is a shortcut annotation in Spring Boot for handling HTTP GET requests.
+It is used in controller classes to map web requests to specific handler methods.
+
+@PostMapping
+It is used to handle HTTP POST requests in Spring Boot controller methods.
+It’s typically used to create new resourcesor submit form data.
+
+@DeleteMapping
+It is used to handle HTTP DELETE requests in a Spring Boot controller.
+It is commonly used to delete a resource identified by a path variable (e.g., a user ID).
+
+@RequestBody
+It is used in Spring Boot controllers to bind the HTTP request body (usually JSON or XML)
+to a Java object. It is most commonly used with @PostMapping, @PutMapping, or @PatchMapping methods.
+
+@PathVariable
+It is used in Spring Boot to extract values from the URI path and
+bind them to method parameters in controller methods.
+
+@RequestParam
+It is used to extract query parameters or form data from the URL in HTTP
+requests and bind them to method parameters in your controller.
+
+@ResponseStatus
+This annotation in Spring Boot is used to set the HTTP status code for a controller method
+or an exception without using ResponseEntity. It's a simple and declarative way to control the response status.

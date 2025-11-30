@@ -1,0 +1,10 @@
+In this we are going to learn
+1) Basic architecture of web service
+    Controller -> Landing place for api
+    DispatcherServlet -> Ib-build provided by springboot framework
+    PathVariable ->  To support Get request which has specific value in the request
+                    (example http://localhost:8081/users/41)
+    RequestParameter -> get used when you want to support parameters in url
+        example: http://localhost:8081/users/test2?page=5&name=Abhijit
+    DeleteMapping -> To support delete operation.
+    PatchMapping -> To support update operation.

@@ -1,0 +1,51 @@
+@JsonIgnore
+
+This annotation in Jackson is used to exclude a specific field from JSON serialization and deserialization.
+
+
+
+@JsonIgnoreProperties
+
+This annotation in Jackson is used to ignore specified fields during JSON serialization and deserialization — either when reading JSON into Java objects, or writing Java objects into JSON.
+
+
+
+@JsonIgnoreProperties({"password", "ssn"})
+public class User {
+    private String name;
+    private String email;
+    private String password;
+    private String ssn;
+}
+
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+
+This annotation in Jackson (used in Spring Boot and other Java frameworks) controls which properties are included during JSON serialization — especially useful for cleaning up JSON output by removing null or default values.
+
+
+
+@JsonProperty
+
+This annotation in Jackson is used to customize the name of a field in the JSON output or input. It works both for serialization (Java → JSON) and deserialization (JSON → Java).
+
+Why to use this annotation:
+
+Match a different naming convention (e.g., snake_case in JSON vs camelCase in Java)
+
+Handle legacy APIs with fixed field names
+
+Customize field names for clarity or localization
+
+
+
+@JsonFormat
+
+This annotation in Jackson is used to specify how values should be formatted during JSON serialization and deserialization — especially for dates, times, enums, and numbers.
+
+public class Event {
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime eventTime;
+}
+A common use-case is when we format dates in Spring Boot.

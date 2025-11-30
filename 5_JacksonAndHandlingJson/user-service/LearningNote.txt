@@ -1,0 +1,11 @@
+1) Which property of Model class includes for serialization (during response in API) and whats not include
+ Refer "User" class from "model" package
+
+2) How to prevent API user to include unknown properties in request body.
+Refer settings in application.yaml
+
+3) Transformation of "User" properties from Java based naming convention to Json appropriate naming convention
+Refer "CreateUserRequest" and "User" class in "Model" package
+
+4) Transform time related information from "Date" object to json compliant formate
+ Refer "User" class from "model" package

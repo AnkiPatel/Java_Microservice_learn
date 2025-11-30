@@ -1,0 +1,13 @@
+
+1) Refer following in "UserController" class to understand how to get http header parameter in the code.
+@GetMapping("/testheader")
+@GetMapping("/testheaderwithdata")
+@GetMapping("/testheadernext")
+
+2) Refer following in "UserController" class to understand how to provide correct http response code.
+@PostMapping
+@ResponseStatus(HttpStatus.CREATED)
+
+3) Refer following in "UserController" class to understand usage of ResponseBody.
+    @GetMapping("/{EnteredId}")
+    public ResponseEntity<User> getUser(@PathVariable("EnteredId") String userId) {
