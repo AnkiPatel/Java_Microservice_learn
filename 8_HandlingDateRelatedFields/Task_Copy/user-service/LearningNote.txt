@@ -1,0 +1,3 @@
+A: Date creation with JPA for "user"
+-----------
+look at "User" and "UserServiceImpl" class

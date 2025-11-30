@@ -1,0 +1,69 @@
+A. Database operation i have done
+--------------------
+[in windows cmd prompt, in this sequence ]
+
+* login:
+mysql -u root -p;
+
+* see existing databases
+show databases;
+
+* Create new db (jmslearn = ava microservice learn)
+create database jmslearn;
+
+* Check the entry of newly created db
+show databases;
+
+* Activate newly created db
+use jmslearn;
+
+* Create "users" table
+CREATE TABLE users (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	first_name VARCHAR(255),
+	last_name VARCHAR(255),
+	email VARCHAR(255)
+);
+
+* see all the tables in activated db
+show tables;
+
+* check the schema of "users" table
+desc users
+
+* delete the table
+drop table users;
+
+
+
+B. Changes in pom.xml file
+-----------------
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>  // This dependency includes JDBC dependency internally
+</dependency>
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+
+C. JPA
+------------
+*) JPA is the defined set of concepts.
+*) Default implementation of JPA is HIBERNATE
+*) ORM (Object Relational Mapping) :- When java persistent API maps
+            "object orientation" in to DB's "Relational representation", means database table
+            Here object's field will be equivalent row in DB's table
+*)
+
+
+D. Adding annotation for Table and it's columns
+-------------------------
+Refer "user" class
+
+
+E. Updating application.yaml file (for JPA behavriour and DB)
+--------------------------
