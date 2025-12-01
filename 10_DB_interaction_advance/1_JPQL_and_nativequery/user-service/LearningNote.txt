@@ -1,0 +1,45 @@
+
+A: JPQL
+JPQL: Query language, used to query entities stored in a relations database using JPA.
+    Instead of operating on database directly it operates on entity objects.
+
+Check UserRepository class. comment section "Part 1"
+
+@Query("SELECT u FROM User u")  //get all the user
+List<User> customGetUsers();
+
+@Query("SELECT u FROM User u WHERE u.email LIKE %:domain%")  // get all the user having asked string in email.
+List<User> customGetUsersQueryStr(@Param("domain") String domainStr);
+
+
+B: Native Queries
+
+Not all queries can be implicitly provided by hibernate with entity. Some complex query need to be fired in native form.
+How to do that? Refer UserRepository class, PART 2
+
+C: JPQL vs. native query performance
+
+In many cases, using nativeQuery = true with raw SQL in the @Query annotation can be faster than JPQL. However, it's not always faster.
+
+*) When native SQL can be faster:
+
+    1) COMPLEX QUERIES
+    JPQL might not support all SQL features (e.g., window functions, full-text search), or may generate suboptimal SQL.
+
+    2)
+    BULK OPERATIONS
+    Native SQL avoids entity state management (no dirty checking, persistence context overhead).
+
+    3)
+    JOINS AND AGGREGATIONS
+    Direct SQL lets you hand-optimize joins and indexes so joins and aggregations are usually faster with native SQL queries.
+
+
+
+*) When JPQL might be more efficient or preferable:
+
+1) JPQL is easier, cleaner, and integrates well with JPA's entity lifecycle.
+2) JPQL queries benefit from JPA’s first-level (and second-level, if enabled) caching.
+3) JPQL works across different databases without needing to adjust SQL dialects.
+4) Object-oriented — easier to read and maintain than raw SQL in large apps.
+
